@@ -1,3 +1,19 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  root "kittens#index"
+
+  get "/kittens", to: "kittens#index"
+  post "/kittens", to: "kittens#create"
+
+  get "/kittens/new", to: "kittens#new", as: 'new_kitten'
+
+  get "/kittens/:id", to: "kittens#show", as: 'kitten'
+
+  get "/kittens/:id/edit", to: "kittens#edit", as: 'edit_kitten'
+
+  patch "/kittens/:id", to: "kittens#update", as: 'update_kitten'
+
+  delete "/kittens/:id", to: "kittens#destroy", as: 'delete'
+
+
 end

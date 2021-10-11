@@ -1,0 +1,40 @@
+
+<div class="container">
+
+  <div class="row my-5">
+
+    <table class="table table-bordered">
+
+      <thead >
+        <tr class="table-primary">
+          <th scope = "col" colspan = "2">Kitten name:  <%= @kitten.name %></th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" style="width: 25%">Age</th>
+          <td> <%= @kitten.age %> </td>
+        </tr>
+        <tr>
+          <th scope="row" style="width: 25%">Cuteness</th>
+          <td> <%= @kitten.cuteness %> </td>
+        </tr>
+        <tr>
+          <th scope="row" style="width: 25%">Softness</th>
+          <td> <%= @kitten.softness %> </td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <div class="row">
+
+    <%= link_to "Edit Kitten", edit_kitten_path(@kitten) %>
+    <%= link_to "Delete Kitten", delete_path, method: :delete %>
+    <%= link_to "Kittens index", root_path %>
+
+  </div>
+
+</div>
